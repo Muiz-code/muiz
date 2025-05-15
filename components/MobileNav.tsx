@@ -30,7 +30,7 @@ const MobileNav = () => {
         <SheetTrigger className="flex items-center justify-center w-10 h-10 rounded-full bg-none text-white">
           <CiMenuFries className="text-chart-2 text-[30px]" />
         </SheetTrigger>
-        <SheetContent side="right" className="bg-[#151515] text-white">
+        <SheetContent side="right" className="bg-[#151515] text-white w-[100%]">
           <SheetHeader>
             <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
           </SheetHeader>
