@@ -1,6 +1,4 @@
 "use client";
-
-import { title } from "process";
 import {
   FaFigma,
   FaReact,
@@ -20,35 +18,34 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
 
-const about = [
-  {
-    title: "Name",
-    description: "Muiz Owolabi",
-    info: [
-      { fieldName: "Name", fieldValue: "Muiz Owolabi" },
-      {
-        fieldName: "education",
-        fieldValue: "3+ Years",
-      },
-      {
-        fieldName: "Phone",
-        fieldValue: "(+234) 903 841 5909",
-      },
-      {
-        fieldName: "Email",
-        fieldValue: "hollarewajumuiz@gmail.com",
-      },
-      {
-        fieldName: "Freelance",
-        fieldValue: "Available",
-      },
-      {
-        fieldName: "Language",
-        fieldValue: "English",
-      },
-    ],
-  },
-];
+const about = {
+  title: "About Me",
+  description:
+    "I am a passionate frontend developer with a strong focus on creating beautiful and functional user interfaces. I have a keen eye for design and a deep understanding of web technologies. My goal is to build applications that not only look great but also provide an exceptional user experience.",
+  info: [
+    { fieldName: "Name", fieldValue: "Muiz Owolabi" },
+    {
+      fieldName: "education",
+      fieldValue: "3+ Years",
+    },
+    {
+      fieldName: "Phone",
+      fieldValue: "(+234) 903 841 5909",
+    },
+    {
+      fieldName: "Email",
+      fieldValue: "hollarewajumuiz@gmail.com",
+    },
+    {
+      fieldName: "Freelance",
+      fieldValue: "Available",
+    },
+    {
+      fieldName: "Language",
+      fieldValue: "English",
+    },
+  ],
+};
 
 const experience = {
   icon: "FaReact",
@@ -234,8 +231,29 @@ const Resume = () => {
                 </ul>
               </div>
             </TabsContent>
-            <TabsContent value={"about"} className="w-full">
-              about
+            <TabsContent
+              value={"about"}
+              className="w-full text-center xl:text-left"
+            >
+              <div className="flex flex-col gap-[30px]">
+                <h3 className="text-4xl font-bold">{about.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {about.description}
+                </p>
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                  {about.info.map((item, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className="flex items-center justify-center xl:justify-start gap-4"
+                      >
+                        <span className="text-white/60">{item.fieldName}:</span>
+                        <p className="text-xl">{item.fieldValue}</p>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
             </TabsContent>
           </div>
         </Tabs>
