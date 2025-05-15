@@ -148,35 +148,31 @@ const Resume = () => {
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto md:mx-0 gap-6 ">
             <TabsTrigger
               value={"experience"}
-              onClick={() => scrollToSection("experience")}
+              onClick={() => scrollToSection("top")}
             >
               Experience
             </TabsTrigger>
             <TabsTrigger
-              onClick={() => scrollToSection("education")}
+              onClick={() => scrollToSection("top")}
               value={"education"}
             >
               Education
             </TabsTrigger>
             <TabsTrigger
-              onClick={() => scrollToSection("skills")}
+              onClick={() => scrollToSection("top")}
               value={"skills"}
             >
               Skills
             </TabsTrigger>
-            <TabsTrigger
-              onClick={() => scrollToSection("about")}
-              value={"about"}
-            >
+            <TabsTrigger onClick={() => scrollToSection("top")} value={"about"}>
               About me
             </TabsTrigger>
           </TabsList>
+          <div id="top"></div>
           <div className="w-full min-h-[50vh]">
             <TabsContent value={"experience"} className="w-full">
               <div className="flex flex-col gap-4 text-center md:text-left">
-                <h3 id="experience" className="text-4xl font-bold">
-                  {experience.title}
-                </h3>
+                <h3 className="text-4xl font-bold">{experience.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto md:mx-0">
                   {experience.description}
                 </p>
@@ -205,9 +201,7 @@ const Resume = () => {
             </TabsContent>
             <TabsContent value={"education"} className="w-full">
               <div className="flex flex-col gap-4 text-center md:text-left">
-                <h3 id="education" className="text-4xl font-bold">
-                  {education.title}
-                </h3>
+                <h3 className="text-4xl font-bold">{education.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto md:mx-0">
                   {education.description}
                 </p>
@@ -237,9 +231,7 @@ const Resume = () => {
             <TabsContent value={"skills"} className="w-full h-full">
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  <h3 id="skills" className="text-4xl font-bold">
-                    {skills.title}
-                  </h3>
+                  <h3 className="text-4xl font-bold">{skills.title}</h3>
                   <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                     {skills.description}
                   </p>
@@ -271,9 +263,7 @@ const Resume = () => {
               className="w-full text-center xl:text-left"
             >
               <div className="flex flex-col gap-[30px]">
-                <h3 id="about" className="text-4xl font-bold">
-                  {about.title}
-                </h3>
+                <h3 className="text-4xl font-bold">{about.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {about.description}
                 </p>
