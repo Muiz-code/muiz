@@ -11,13 +11,13 @@ const Home = () => {
       <div>
         <div className="container mx-auto flex items-center justify-center">
           <div className="flex flex-col gap-2 md:gap-8 w-full justify-center items-center">
-            <h1 className="text-[30px] font-semibold text-white flex flex-col items-center gap-2">
-              Hello I’m <br />{" "}
+            <h1 className="text-[30px] font-semibold text-white flex flex-col items-center">
+              Hello I’m <br />
               <span className="text-chart-2 text-[50px] uppercase">
                 Muiz Owolabi
               </span>
             </h1>
-            <p className="text-lg md:text-2xl text-gray-400 mt-2">
+            <p className="text-lg md:text-2xl text-gray-400 uppercase text-center">
               Frontend Developer
             </p>
             <div>
