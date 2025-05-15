@@ -58,7 +58,7 @@ const services = () => [
 const Service = () => {
   return (
     <section className="flex flex-col justify-center py-12 md:py-0 min-h-[80vh] ">
-      <div className="mx-auto">
+      <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
