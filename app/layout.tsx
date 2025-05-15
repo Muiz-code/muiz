@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased px-5 md:px-[180px]`}>
+      <body className={`antialiased px-2 md:px-[180px]`}>
         <StairsTransition />
         <Header />
         <PageTrasition>{children}</PageTrasition>
