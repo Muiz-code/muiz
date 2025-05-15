@@ -32,7 +32,7 @@ const MobileNav = () => {
         </SheetTrigger>
         <SheetContent
           side="right"
-          className="bg-[#151515] text-white fixed inset-y-0 right-0 w-[300px] h-screen z-[100]"
+          className="bg-[#151515] text-white fixed inset-y-0 right-0 w-[300px] h-[100vh] z-[100]"
         >
           <SheetHeader>
             <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
