@@ -121,13 +121,22 @@ const skills = {
     { name: "Figma", icon: <FaFigma /> },
   ],
 };
+
+const scrollToSection = (id: string) => {
+  const element = document.getElementById(id);
+  if (element) {
+    setTimeout(() => {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+  }
+};
 const Resume = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        transition: { delay: 1.4, duration: 0.4, ease: "easeIn" },
       }}
       className="min-h-[80vh] flex items-center justify-center py-12 md:py-0"
     >
@@ -137,15 +146,37 @@ const Resume = () => {
           className="flex flex-col xl:flex-row gap-[60px] "
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto md:mx-0 gap-6 ">
-            <TabsTrigger value={"experience"}>Experience</TabsTrigger>
-            <TabsTrigger value={"education"}>Education</TabsTrigger>
-            <TabsTrigger value={"skills"}>Skills</TabsTrigger>
-            <TabsTrigger value={"about"}>About me</TabsTrigger>
+            <TabsTrigger
+              value={"experience"}
+              onClick={() => scrollToSection("experience")}
+            >
+              Experience
+            </TabsTrigger>
+            <TabsTrigger
+              onClick={() => scrollToSection("education")}
+              value={"education"}
+            >
+              Education
+            </TabsTrigger>
+            <TabsTrigger
+              onClick={() => scrollToSection("skills")}
+              value={"skills"}
+            >
+              Skills
+            </TabsTrigger>
+            <TabsTrigger
+              onClick={() => scrollToSection("about")}
+              value={"about"}
+            >
+              About me
+            </TabsTrigger>
           </TabsList>
           <div className="w-full min-h-[50vh]">
             <TabsContent value={"experience"} className="w-full">
               <div className="flex flex-col gap-4 text-center md:text-left">
-                <h3 className="text-4xl font-bold">{experience.title}</h3>
+                <h3 id="experience" className="text-4xl font-bold">
+                  {experience.title}
+                </h3>
                 <p className="max-w-[600px] text-white/60 mx-auto md:mx-0">
                   {experience.description}
                 </p>
@@ -174,7 +205,9 @@ const Resume = () => {
             </TabsContent>
             <TabsContent value={"education"} className="w-full">
               <div className="flex flex-col gap-4 text-center md:text-left">
-                <h3 className="text-4xl font-bold">{education.title}</h3>
+                <h3 id="education" className="text-4xl font-bold">
+                  {education.title}
+                </h3>
                 <p className="max-w-[600px] text-white/60 mx-auto md:mx-0">
                   {education.description}
                 </p>
@@ -204,7 +237,9 @@ const Resume = () => {
             <TabsContent value={"skills"} className="w-full h-full">
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  <h3 className="text-4xl font-bold">{skills.title}</h3>
+                  <h3 id="skills" className="text-4xl font-bold">
+                    {skills.title}
+                  </h3>
                   <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                     {skills.description}
                   </p>
@@ -236,7 +271,9 @@ const Resume = () => {
               className="w-full text-center xl:text-left"
             >
               <div className="flex flex-col gap-[30px]">
-                <h3 className="text-4xl font-bold">{about.title}</h3>
+                <h3 id="about" className="text-4xl font-bold">
+                  {about.title}
+                </h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {about.description}
                 </p>

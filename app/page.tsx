@@ -7,7 +7,7 @@ import { FiDownload } from "react-icons/fi";
 
 const Home = () => {
   return (
-    <section className="h-[85vh] md:h-[80vh] px-4 flex flex-col justify-between items-center ">
+    <section className="h-[85vh] md:h-[80vh] px-4 flex flex-col justify-between items-center mt-[100px]">
       <div>
         <div className="container mx-auto flex items-center justify-center">
           <div className="flex flex-col gap-2 md:gap-8 w-full justify-center items-center">
@@ -24,7 +24,7 @@ const Home = () => {
               <TypingText />
             </div>
             <div className="flex flex-col items-center md:flex-row gap-4 mt-2">
-              <Link href="/Owolabi-Muiz-Resume.pdf" download>
+              <Link href="/public/Owolabi-Muiz-Resume.pdf" download>
                 <Button
                   variant="outline"
                   size="lg"

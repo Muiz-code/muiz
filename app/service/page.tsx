@@ -58,8 +58,15 @@ const services = () => [
 const Service = () => {
   return (
     <section className="flex flex-col justify-center py-12 md:py-0 min-h-[80vh] ">
-      <div className="container mx-auto">
-        <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-[60px]">
+      <div className="mx-auto">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: { delay: 1.4, duration: 0.4, ease: "easeIn" },
+          }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-[60px]"
+        >
           {services().map((service, index) => {
             return (
               <div
