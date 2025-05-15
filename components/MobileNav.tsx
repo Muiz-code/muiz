@@ -35,7 +35,7 @@ const MobileNav = () => {
             <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
           </SheetHeader>
 
-          <div className="mt-32 mb-40 text-center text-2xl">
+          <div className="mt-10 mb-20 text-center text-2xl">
             <Link href={"/"}>
               <h1 className="text-4xl font-semibold">
                 Muiz<span className="text-chart-2">.</span>
