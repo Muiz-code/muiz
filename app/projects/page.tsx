@@ -184,7 +184,7 @@ const Projects = () => {
               </h3>
               <p className="text-white/60">{project.description}</p>
 
-              <ul className="gap-4 grid grid-cols-4">
+              <ul className="gap-4 grid md:grid-cols-4 grid-cols-2">
                 {project.stack.map((item, index) => {
                   return (
                     <li key={index} className="text-xl text-chart-2">
