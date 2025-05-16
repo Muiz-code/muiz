@@ -79,7 +79,7 @@ const projects = [
     ],
   },
   {
-    num: "04",
+    num: "05",
     category: "Frontend",
     title: "Fashion Site",
     description:
@@ -95,7 +95,7 @@ const projects = [
     ],
   },
   {
-    num: "05",
+    num: "06",
     category: "FullStack",
     title: "Mobile Housing",
     description: " brands, this was an hackathon which i won.",
@@ -112,7 +112,7 @@ const projects = [
     ],
   },
   {
-    num: "06",
+    num: "07",
     category: "FullStack",
     title: "Nidle Fashion Site",
     description:
@@ -123,7 +123,7 @@ const projects = [
     stack: [{ name: "React" }, { name: "Javascript" }, { name: "Tailwind" }],
   },
   {
-    num: "06",
+    num: "08",
     category: "Frontend",
     title: "Amway",
     description:
@@ -134,7 +134,7 @@ const projects = [
     stack: [{ name: "React" }, { name: "TypeScript" }, { name: "Tailwind" }],
   },
   {
-    num: "07",
+    num: "09",
     category: "FullStack",
     title: "Aparte",
     description:
