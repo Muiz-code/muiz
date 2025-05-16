@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/tooltip";
 import Link from "next/link";
 import Image from "next/image";
+import WorkSliderBtns from "@/components/WorkSliderBtns";
 
 const projects = [
   {
@@ -98,7 +99,7 @@ const projects = [
     category: "FullStack",
     title: "Mobile Housing",
     description: " brands, this was an hackathon which i won.",
-    image: "/assets/shortlet.png",
+    image: "/assets/gif/Shortlet.gif",
     github: "",
     live: "",
     stack: [
@@ -113,13 +114,24 @@ const projects = [
   {
     num: "06",
     category: "FullStack",
-    title: "E-commerce Fashion Site",
+    title: "Nidle Fashion Site",
     description:
       "Developed a  react app that helps you to follow up and get latest clothing brands.",
-    image: "/assets/e-commerceSite.jpeg",
+    image: "/assets/gif/Nidle.gif",
     github: "",
     live: "",
     stack: [{ name: "React" }, { name: "Javascript" }, { name: "Tailwind" }],
+  },
+  {
+    num: "06",
+    category: "Frontend",
+    title: "Amway",
+    description:
+      "Developed a  react app that helps you to follow up and get latest clothing brands.",
+    image: "/assets/gif/Amway.gif",
+    github: "",
+    live: "",
+    stack: [{ name: "React" }, { name: "TypeScript" }, { name: "Tailwind" }],
   },
   {
     num: "07",
@@ -127,7 +139,7 @@ const projects = [
     title: "Aparte",
     description:
       "Aparte is a mobile application designed to solve the hassle and stress of finding a place to stay. It connects users with available shortlet properties, allowing them to book accommodations conveniently.",
-    image: "/assets/aparte.jpg",
+    image: "/assets/gif/Aparte.gif",
     github: "",
     live: "",
     stack: [
@@ -222,20 +234,27 @@ const Projects = () => {
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-                      <div className="absolute top-0 bottom-0 w-full h-[50%] bg-black/10 z-10"></div>
+                    <div className="h-[460px] relative group flex justify-center items-center bg-black">
+                      <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                       <div className="relative w-full h-full">
                         <Image
                           src={project.image}
                           fill
-                          className="object-contain"
+                          className="w-[100%] pointer-events-none select-none"
                           alt={project.title}
+                          onContextMenu={(e) => e.preventDefault()}
                         />
                       </div>
                     </div>
                   </SwiperSlide>
                 );
               })}
+              <WorkSliderBtns
+                containerStyle="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] 
+                xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none "
+                btnStyles="bg-chart-2 text-black text-[22px] w-[44px] h-[44px] 
+                flex justify-center items-center transition-all"
+              />
             </Swiper>
           </div>
         </div>
