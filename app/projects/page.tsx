@@ -24,7 +24,7 @@ const projects = [
       "My personal portfolio showcasing my skills, projects, and experience.",
     image: "/assets/gif/Portfolio.gif",
     github: "",
-    live: "",
+    live: "https://muiz-owolabi-portfoliio.netlify.app",
     stack: [{ name: "Html5" }, { name: "Css3" }, { name: "Javascript" }],
   },
   {
@@ -34,8 +34,8 @@ const projects = [
     description:
       "A React app that helps you avoid market stress and get raw food material directly at your door step N.B: Available only in a particular location.",
     image: "/assets/gif/Bamdolod.gif",
-    github: "",
-    live: "",
+    github: "https://github.com/Muiz-code/Bamdo_Lod",
+    live: "https://bamdolod.vercel.app/",
     stack: [
       { name: "React" },
       { name: "TypeScript" },
@@ -50,8 +50,8 @@ const projects = [
     description:
       " A fintech platform using React.js, Material UI, and Tailwind CSS, integrating a secure payment gateway and designing a user-friendly interface with animations for an enhanced experience.",
     image: "/assets/gif/tukay.gif",
-    github: "",
-    live: "",
+    github: "https://github.com/Muiz-code/TukayNewDesign",
+    live: "https://tukay-taupe.vercel.app/",
     stack: [
       { name: "React" },
       { name: "Javascript" },
@@ -69,8 +69,8 @@ const projects = [
     description:
       "A responsive and user-friendly webapp for BFCS Laundry, implementing modern web technologies to improve user experience and service accessibility. The website featured intuitive navigation, service booking functionality, and seamless design to enhance customer engagement",
     image: "/assets/gif/BFCs.gif",
-    github: "",
-    live: "",
+    github: "https://github.com/Muiz-code/BFCS",
+    live: "https://BFCS.uk",
     stack: [
       { name: "React" },
       { name: "TypeScript" },
@@ -86,7 +86,7 @@ const projects = [
       " A React app that helps you to follow up and get latest clothing brands, this was an hackathon which i won.",
     image: "/assets/fashionShoppingSite.jpeg",
     github: "",
-    live: "",
+    live: "https://myfashion-shopping.netlify.app/",
     stack: [
       { name: "React" },
       { name: "TypeScript" },
@@ -100,8 +100,8 @@ const projects = [
     title: "Mobile Housing",
     description: " brands, this was an hackathon which i won.",
     image: "/assets/gif/Shortlet.gif",
-    github: "",
-    live: "",
+    github: "https://github.com/Muiz-code/ShortLet-site",
+    live: "https://short-let-site.vercel.app/",
     stack: [
       { name: "React" },
       { name: "Javascript" },
@@ -118,8 +118,8 @@ const projects = [
     description:
       "Developed a  react app that helps you to follow up and get latest clothing brands.",
     image: "/assets/gif/Nidle.gif",
-    github: "",
-    live: "",
+    github: "https://github.com/Muiz-code/GOYA-E-commerce",
+    live: "https://e-comerce-fashionsite.netlify.app/",
     stack: [{ name: "React" }, { name: "Javascript" }, { name: "Tailwind" }],
   },
   {
@@ -129,8 +129,8 @@ const projects = [
     description:
       "Developed a  react app that helps you to follow up and get latest clothing brands.",
     image: "/assets/gif/Amway.gif",
-    github: "",
-    live: "",
+    github: "https://github.com/Muiz-code/Amway",
+    live: "https://amway-pi.vercel.app/",
     stack: [{ name: "React" }, { name: "TypeScript" }, { name: "Tailwind" }],
   },
   {
@@ -140,7 +140,7 @@ const projects = [
     description:
       "Aparte is a mobile application designed to solve the hassle and stress of finding a place to stay. It connects users with available shortlet properties, allowing them to book accommodations conveniently.",
     image: "/assets/gif/Aparte.gif",
-    github: "",
+    github: "https://github.com/0xxeugene/Aparte",
     live: "",
     stack: [
       { name: "React Native" },
@@ -197,7 +197,7 @@ const Projects = () => {
               <div className="border border-white/20"></div>
 
               <div className="flex items-center gap-4">
-                <Link href={project.live}>
+                <Link href={project.live} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/20 flex justify-center items-center group cursor-pointer">
@@ -209,7 +209,7 @@ const Projects = () => {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
-                <Link href={project.github}>
+                <Link href={project.github} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/20 flex justify-center items-center group cursor-pointer">
