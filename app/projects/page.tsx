@@ -49,7 +49,7 @@ const projects = [
     title: "Tukay",
     description:
       " A fintech platform using React.js, Material UI, and Tailwind CSS, integrating a secure payment gateway and designing a user-friendly interface with animations for an enhanced experience.",
-    image: "/assets/gif/tukay.gif",
+    image: "/assets/gif/Tukay.gif",
     github: "https://github.com/Muiz-code/TukayNewDesign",
     live: "https://tukay-taupe.vercel.app/",
     stack: [
