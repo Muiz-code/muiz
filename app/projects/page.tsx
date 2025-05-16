@@ -21,7 +21,7 @@ const projects = [
     title: "Muiz Owolabi Portfolio",
     description:
       "My personal portfolio showcasing my skills, projects, and experience.",
-    image: "/assets/secondPortfolio.jpeg",
+    image: "/assets/gif/Portfolio.gif",
     github: "",
     live: "",
     stack: [{ name: "Html5" }, { name: "Css3" }, { name: "Javascript" }],
@@ -32,7 +32,7 @@ const projects = [
     title: "Food Ordering WebApp",
     description:
       "A React app that helps you avoid market stress and get raw food material directly at your door step N.B: Available only in a particular location.",
-    image: "/assets/Bamdod.png",
+    image: "/assets/gif/Bamdolod.gif",
     github: "",
     live: "",
     stack: [
@@ -48,7 +48,7 @@ const projects = [
     title: "Tukay",
     description:
       " A fintech platform using React.js, Material UI, and Tailwind CSS, integrating a secure payment gateway and designing a user-friendly interface with animations for an enhanced experience.",
-    image: "/assets/tukay.png",
+    image: "/assets/gif/tukay.gif",
     github: "",
     live: "",
     stack: [
@@ -67,7 +67,7 @@ const projects = [
     title: "BFCS",
     description:
       "A responsive and user-friendly webapp for BFCS Laundry, implementing modern web technologies to improve user experience and service accessibility. The website featured intuitive navigation, service booking functionality, and seamless design to enhance customer engagement",
-    image: "/assets/BFCS.png",
+    image: "/assets/gif/BFCs.gif",
     github: "",
     live: "",
     stack: [
@@ -223,12 +223,12 @@ const Projects = () => {
                 return (
                   <SwiperSlide key={index} className="w-full">
                     <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-                      <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+                      <div className="absolute top-0 bottom-0 w-full h-[50%] bg-black/10 z-10"></div>
                       <div className="relative w-full h-full">
                         <Image
                           src={project.image}
                           fill
-                          className="object-cover"
+                          className="object-contain"
                           alt={project.title}
                         />
                       </div>
