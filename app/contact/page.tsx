@@ -46,39 +46,54 @@ const Contact = () => {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-[30px]">
           <div className="xl:w-[54%] order-2 xl:order-none">
-            <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+            <form
+              action="https://formspree.io/f/xbjvwqdb"
+              method="POST"
+              target="_blank"
+              className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
+            >
               <h3 className="text-4xl text-chart-2">Let's Work Together</h3>
               <p className="text-white/60">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex,
                 quasi.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="Firstname" />
-                <Input type="lastname" placeholder="Lastname" />
-                <Input type="email" placeholder="Email" />
-                <Input type="phone" placeholder="Phone Number" />
+                <Input type="text" name="firstname" placeholder="Firstname" />
+                <Input type="text" name="lastname" placeholder="Lastname" />
+                <Input type="email" name="email" placeholder="Email" />
+                <Input type="text" name="phone" placeholder="Phone Number" />
               </div>
-              <Select>
+              <Select name="service">
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select A Service" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
                     <SelectLabel>Select A Service</SelectLabel>
-                    <SelectItem value="wd">Web Development</SelectItem>
-                    <SelectItem value="mad">Mobile App Development</SelectItem>
-                    <SelectItem value="po">Performance Optimization</SelectItem>
-                    <SelectItem value="uce">
+                    <SelectItem value="Web Development">
+                      Web Development
+                    </SelectItem>
+                    <SelectItem value="Mobile App Development">
+                      Mobile App Development
+                    </SelectItem>
+                    <SelectItem value="Performance Optimization">
+                      Performance Optimization
+                    </SelectItem>
+                    <SelectItem value="UI Component Engineering">
                       UI Component Engineering
                     </SelectItem>
-                    <SelectItem value="ttm">
+                    <SelectItem value="Technical Training & Mentorship">
                       Technical Training & Mentorship
                     </SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
 
-              <Textarea className="h-[200px]" placeholder="Message To Muiz" />
+              <Textarea
+                name="message"
+                className="h-[200px]"
+                placeholder="Message To Muiz"
+              />
 
               <Button size="lg" className="max-w-40">
                 Send Message
