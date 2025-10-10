@@ -13,7 +13,7 @@ const Home = () => {
           <div className="flex flex-col gap-2 md:gap-8 w-full justify-center items-center">
             <h1 className="text-[30px] font-semibold text-white flex flex-col items-center">
               Hello I’m <br />
-              <span className="text-chart-2 text-[50px] uppercase">
+              <span className="text-chart-2 md:text-[50px] text-[40px] uppercase">
                 Muiz Owolabi
               </span>
             </h1>
