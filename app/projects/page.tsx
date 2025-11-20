@@ -18,17 +18,46 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "Portfolio",
-    title: "Muiz Owolabi Portfolio",
+    category: "WebApp",
+    title: "The Lagos Wellness Club",
     description:
-      "My personal portfolio showcasing my skills, projects, and experience.",
-    image: "/assets/gif/Portfolio.gif",
+      "Where Lagos comes to live well. We test the routines, explore the tools, and host the experiences, so you only engage with what truly nourishes you. At TLWC, we're building a community of curious, conscious Lagosians who believe wellness should be intentional, sustainable, and part of everyday life.",
+    image:
+      "https://res.cloudinary.com/dhhvxjczm/video/upload/v1763650890/Recording_2025-09-23_095534_a1d3yq.mp4",
     github: "",
-    live: "https://muiz-owolabi-portfoliio.netlify.app",
-    stack: [{ name: "Html5" }, { name: "Css3" }, { name: "Javascript" }],
+    live: "https://www.thelagoswellnessclub.com",
+    stack: [
+      { name: "Reactjs" },
+      { name: "Typescript" },
+      { name: "Tailwind" },
+      { name: "Godaddy" },
+      { name: "Vercel" },
+      { name: "firebase" },
+      { name: "React hooks" },
+    ],
   },
   {
     num: "02",
+    category: "WebApp",
+    title: "Those Who Dine",
+    description:
+      "Those Who Dine is an events agency specialising in exclusive supper clubs and curated dining experiences. We craft immersive, themed gatherings and plan bespoke dinner events, blending exceptional cuisine, ambiance, and hospitality. Whether joining our signature supper clubs or hosting your own event, we create unforgettable moments over great food and conversation.",
+    image:
+      "https://res.cloudinary.com/dhhvxjczm/video/upload/v1763651583/TWD_e5pwur.mp4",
+    github: "",
+    live: "https://www.thosewhodine.co",
+    stack: [
+      { name: "Reactjs" },
+      { name: "Typescript" },
+      { name: "Tailwind" },
+      { name: "Godaddy" },
+      { name: "Vercel" },
+      { name: "firebase" },
+      { name: "React hooks" },
+    ],
+  },
+  {
+    num: "03",
     category: "Fullstack",
     title: "Food Ordering WebApp",
     description:
@@ -44,7 +73,7 @@ const projects = [
     ],
   },
   {
-    num: "03",
+    num: "04",
     category: "Fullstack",
     title: "Tukay",
     description:
@@ -63,7 +92,7 @@ const projects = [
     ],
   },
   {
-    num: "04",
+    num: "05",
     category: "Fullstack",
     title: "BFCS",
     description:
@@ -79,7 +108,7 @@ const projects = [
     ],
   },
   {
-    num: "05",
+    num: "06",
     category: "Frontend",
     title: "Fashion Site",
     description:
@@ -95,7 +124,7 @@ const projects = [
     ],
   },
   {
-    num: "06",
+    num: "07",
     category: "FullStack",
     title: "Mobile Housing",
     description: " brands, this was an hackathon which i won.",
@@ -112,7 +141,7 @@ const projects = [
     ],
   },
   {
-    num: "07",
+    num: "08",
     category: "FullStack",
     title: "Nidle Fashion Site",
     description:
@@ -123,7 +152,7 @@ const projects = [
     stack: [{ name: "React" }, { name: "Javascript" }, { name: "Tailwind" }],
   },
   {
-    num: "08",
+    num: "09",
     category: "Frontend",
     title: "Amway",
     description:
@@ -134,7 +163,7 @@ const projects = [
     stack: [{ name: "React" }, { name: "TypeScript" }, { name: "Tailwind" }],
   },
   {
-    num: "09",
+    num: "10",
     category: "FullStack",
     title: "Aparte",
     description:
@@ -172,7 +201,7 @@ const Projects = () => {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
-            <div className="flex flex-col gap-[30px] h-[50%]">
+            <div className="flex flex-col gap-[20px] h-[50%]">
               <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
                 {project.num}
               </div>
@@ -232,28 +261,50 @@ const Projects = () => {
               onSlideChange={handleSlideChange}
             >
               {projects.map((project, index) => {
+                const isVideo =
+                  project.image.includes(".mp4") ||
+                  project.image.includes(".webm");
+
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-black">
-                      <div className="absolute top-0 bottom-0 w-full h-full bg-black/10"></div>
-                      <div className="relative w-full h-full">
-                        <Image
-                          src={project.image}
-                          fill
-                          className="w-[100%] pointer-events-none select-none"
-                          alt={project.title}
-                          onContextMenu={(e) => e.preventDefault()}
-                        />
+                    <Link
+                      href={project.live}
+                      target="_blank"
+                      className="block h-[460px] relative group"
+                    >
+                      <div className="h-full flex justify-center items-center bg-black">
+                        <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+                        <div className="relative w-full h-full">
+                          {isVideo ? (
+                            <video
+                              src={project.image}
+                              className="w-full h-full object-contain pointer-events-none select-none"
+                              autoPlay
+                              loop
+                              muted
+                              playsInline
+                              onContextMenu={(e) => e.preventDefault()}
+                            />
+                          ) : (
+                            <Image
+                              src={project.image}
+                              fill
+                              className="w-full object-contain pointer-events-none select-none"
+                              alt={project.title}
+                              onContextMenu={(e) => e.preventDefault()}
+                            />
+                          )}
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   </SwiperSlide>
                 );
               })}
               <WorkSliderBtns
                 containerStyle="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] 
-                xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none "
+      xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none "
                 btnStyles="bg-chart-2 text-black text-[22px] w-[44px] h-[44px] 
-                flex justify-center items-center transition-all"
+      flex justify-center items-center transition-all"
               />
             </Swiper>
           </div>
