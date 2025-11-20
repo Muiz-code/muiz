@@ -54,8 +54,7 @@ const Contact = () => {
             >
               <h3 className="text-4xl text-chart-2">Let's Work Together</h3>
               <p className="text-white/60">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex,
-                quasi.
+                Hit me up asap, have got lots of ideas buzzing in my head
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input type="text" name="firstname" placeholder="Firstname" />
