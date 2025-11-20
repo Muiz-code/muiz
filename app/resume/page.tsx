@@ -18,6 +18,19 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
 
+const handleDownloadCV = () => {
+  const ok = window.confirm("Do you want to download my CV?");
+  if (!ok) return;
+
+  const cvUrl = "/Owolabi_Resume(CV).pdf"; // <-- place file inside public/
+  const a = document.createElement("a");
+  a.href = cvUrl;
+  a.download = "Owolabi_Resume(CV).pdf";
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+};
+
 const about = {
   title: "About Me",
   description:
@@ -85,6 +98,7 @@ const experience = {
     },
   ],
 };
+
 const education = {
   icon: "FaReact",
   title: "My Education",
@@ -102,6 +116,12 @@ const education = {
       duration: "2023",
     },
   ],
+};
+const download = {
+  icon: "FaReact",
+  title: "My CV Download",
+  description:
+    "Click the 'Download CV' tab to download my resume in PDF format for curated details about my skills, experience, and education.",
 };
 
 const skills = {
@@ -130,6 +150,7 @@ const scrollToSection = (id: string) => {
     }, 100);
   }
 };
+
 const Resume = () => {
   return (
     <motion.div
@@ -152,24 +173,39 @@ const Resume = () => {
             >
               Experience
             </TabsTrigger>
+
             <TabsTrigger
               onClick={() => scrollToSection("top")}
               value={"education"}
             >
               Education
             </TabsTrigger>
+
             <TabsTrigger
               onClick={() => scrollToSection("top")}
               value={"skills"}
             >
               Skills
             </TabsTrigger>
+
             <TabsTrigger onClick={() => scrollToSection("top")} value={"about"}>
               About me
             </TabsTrigger>
+
+            <TabsTrigger
+              value="download"
+              onClick={(e) => {
+                e.preventDefault();
+                handleDownloadCV();
+              }}
+            >
+              Download CV
+            </TabsTrigger>
           </TabsList>
+
           <div id="top"></div>
           <div className="w-full min-h-[50vh]">
+            {/* EXPERIENCE */}
             <TabsContent value={"experience"} className="w-full">
               <div className="flex flex-col gap-4 text-center md:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
@@ -199,6 +235,8 @@ const Resume = () => {
                 </ScrollArea>
               </div>
             </TabsContent>
+
+            {/* EDUCATION */}
             <TabsContent value={"education"} className="w-full">
               <div className="flex flex-col gap-4 text-center md:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
@@ -228,6 +266,8 @@ const Resume = () => {
                 </ScrollArea>
               </div>
             </TabsContent>
+
+            {/* SKILLS */}
             <TabsContent value={"skills"} className="w-full h-full">
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
@@ -258,6 +298,8 @@ const Resume = () => {
                 </ul>
               </div>
             </TabsContent>
+
+            {/* ABOUT */}
             <TabsContent
               value={"about"}
               className="w-full text-center xl:text-left"
@@ -280,6 +322,15 @@ const Resume = () => {
                     );
                   })}
                 </ul>
+              </div>
+            </TabsContent>
+
+            <TabsContent value="download">
+              <div className="flex flex-col gap-4 text-center md:text-left">
+                <h3 className="text-4xl font-bold">{download.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto md:mx-0">
+                  {download.description}
+                </p>
               </div>
             </TabsContent>
           </div>
