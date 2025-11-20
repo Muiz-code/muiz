@@ -90,11 +90,11 @@ const Contact = () => {
 
               <Textarea
                 name="message"
-                className="h-[200px]"
+                className="h-[120px]"
                 placeholder="Message To Muiz"
               />
 
-              <Button size="lg" className="max-w-40">
+              <Button size="lg" className="max-w-50">
                 Send Message
               </Button>
             </form>
